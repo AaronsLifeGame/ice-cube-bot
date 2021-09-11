@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const Command = require("./Command.js");
+const Interaction = require("./Interaction.js");
 const Event = require("./Event.js")
 const config = require("../Data/config.json");
 
@@ -31,6 +32,18 @@ class Client extends Discord.Client {
 					 this.commands.set(command.name, command);
 					});	
 
+			// Delete this if cant fix Interactions
+			fs.readdirSync("./src/Interactions")
+			.filter(file => file.endsWith(".js"))
+			.forEach(file => {
+					/**
+					 * @type {Interaction}
+					 */
+					 const command = require(`../Interactions/${file}`);
+					 console.log(`Interaction ${command.name} loaded`);
+					 this.commands.set(command.name, command);
+					});	
+
 			fs.readdirSync("./src/Events")
 			.filter(file => file.endsWith(".js"))
 			.forEach(file => {
@@ -40,7 +53,7 @@ class Client extends Discord.Client {
 					 const event = require(`../Events/${file}`);
 					 console.log(`Event ${event.event} loaded`);
 					 this.on(event.event, event.run.bind(null, this));
-					})
+					});
 
 			this.login(token);		
 		}

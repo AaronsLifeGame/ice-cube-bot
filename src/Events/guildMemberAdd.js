@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 module.exports = new Event("guildMemberAdd", (client, member) => {
 
-	const channel = member.guild.channels.cache.find(c => c.name == "ice-cube-bot");
+	const channel = member.guild.channels.cache.find(c => c.name == "logs");
 
 	if (!channel) return;
 
@@ -11,11 +11,10 @@ module.exports = new Event("guildMemberAdd", (client, member) => {
 
 	embed
 	.setColor("#57F287")
-	.setTitle(`${member.user.username} has Joined!`)
+	.setTitle(`Member Joined!`)
 	.setDescription(`
-		Welcome to the Chill Zone 2.0!
-		─────────────────── 
-		Your the ${member.guild.members.cache.size}th Member!
+		${member.user} has Joined the Server! \n
+		The ${member.guild.members.cache.size}th Member!
 		`)
 	.setThumbnail(member.user.avatarURL({dynamic: true}))
 

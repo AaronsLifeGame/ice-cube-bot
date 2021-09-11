@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 module.exports = new Event("guildMemberRemove", (client, member) => {
 
-	const channel = member.guild.channels.cache.find(c => c.name == "ice-cube-bot");
+	const channel = member.guild.channels.cache.find(c => c.name == "logs");
 
 	if (!channel) return;
 
@@ -11,10 +11,9 @@ module.exports = new Event("guildMemberRemove", (client, member) => {
 	
 	embed
 	.setColor("#ED4245")
-	.setTitle(`${member.user.username} has Left!`)
+	.setTitle(`Member Left!`)
 	.setDescription(`
-		We Hope you Enjoyed your Stay! 
-		───────────────────────── 
+		${member.user} has Left the Server! \n
 		User Joined ${member.joinedAt.toUTCString()}
 		`)
 	.setThumbnail(member.user.avatarURL({dynamic: true}))

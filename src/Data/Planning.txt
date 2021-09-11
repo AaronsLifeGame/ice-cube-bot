@@ -1,21 +1,54 @@
-Server
-	Prefix (! or /)
+	Server
+=>		Prefix (! or /)
 
-Commands
-	ping
-	invite
+	Commands
+--		help
+=>		ping
+=>		hello
+=>		embed
+		invite
 
-Moderation
-	Delete (x amount)
-	Clear	
+		Leveling System (rank)
+		Auto Roles
+		Reaction Roles
 
-	Warning
-	Muting
-	Kicking
-	Banning
+	Moderation
+--		help
 
-Audit Logs
-	
+--		Delete (x amount)
+		Clear	
 
-Activities
-	
+		Welcomer
+
+		Warning
+		Muting
+		Kicking
+		Banning
+
+		Statistics (Counters)
+
+	Audit Logs
+=>		Member Joined
+=>		Member Left
+
+=>		Message (Sent, Edited, Deleted)
+		
+		Server Edited
+=>		Channel (Created, Edited, Deleted)
+=>		Category (Created, Edited, Deleted)
+
+--		Roles (Created, Edited, Deleted | Given, Removed)
+
+		Moderation (Warning, Muting, Kicking, Banning)
+
+	Activities
+		Music (+ Needed cmds)
+		Slots (+ Needed cmds)
+		Counting
+
+		Birthday
+
+		Youtube
+		Twitch
+		Instagram
+		Twitter
