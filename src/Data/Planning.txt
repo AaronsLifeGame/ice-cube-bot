@@ -1,0 +1,21 @@
+Server
+	Prefix (! or /)
+
+Commands
+	ping
+	invite
+
+Moderation
+	Delete (x amount)
+	Clear	
+
+	Warning
+	Muting
+	Kicking
+	Banning
+
+Audit Logs
+	
+
+Activities
+	
