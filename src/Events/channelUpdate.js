@@ -18,7 +18,7 @@ module.exports = new Event("channelUpdate", async (client, channel) => {
     .setColor("#5865F2")
     .setTitle(`Channel Update!`)
     .setDescription(`
-        ${log.executor} has Edited *${channel.name}*!
+        ${log.executor} has Edited *#${channel.name}*!
         Channel Updated to ${channel}!
         `)
     

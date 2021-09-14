@@ -18,7 +18,7 @@ module.exports = new Event("roleDelete", async (client, role) => {
     .setColor("#5865F2")
     .setTitle(`Role Deleted!`)
     .setDescription(`
-        ${log.executor} has Deleted *#${role}*!
+        ${log.executor} has Deleted *@${role.name}*!
         `)
     
     logRole.send({ embeds: [embed] });

@@ -9,6 +9,8 @@
   "author": "AaronsLG",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.2.0-dev.1631232307.3183b11"
+    "discord.js": "^13.2.0-dev.1631232307.3183b11",
+    "dotenv": "^10.0.0",
+    "fero-dc": "^2.0.5"
   }
 }

@@ -7,7 +7,14 @@ module.exports = new Command({
 
     async run(message,cargs,cclient) {
         const msg = await message.reply(`
-            **This Needs to be Set Up**
+**This Needs to be Set Up**
+
+**!ping** - Shows the Ping of the Bot!
+**!hello** - Hello!
+**!embed** - Shows an Embed!
+**!invite** - Shows Invite Links!
+
+**!help** - Shows this Message!
             `)
     }
 })

@@ -6,19 +6,20 @@
 =>		ping
 =>		hello
 =>		embed
-		invite
+--		invite
 
 		Leveling System (rank)
 		Auto Roles
 		Reaction Roles
 
-	Moderation
---		help
+--	Interactions
+		help
 
---		Delete (x amount)
+		Delete (x amount)
 		Clear	
 
-		Welcomer
+	Moderation
+		Welcomer (using Canvas ??)
 
 		Warning
 		Muting
@@ -37,7 +38,8 @@
 =>		Channel (Created, Edited, Deleted)
 =>		Category (Created, Edited, Deleted)
 
---		Roles (Created, Edited, Deleted | Given, Removed)
+=>		Roles (Created, Edited, Deleted)
+--		User Roles (Given, Removed)
 
 		Moderation (Warning, Muting, Kicking, Banning)
 

@@ -19,9 +19,6 @@ const Client = require("./Client.js");
 	 	this.name = options.name;
 	 	this.description = options.description;
 	 	this.permission = options.permission;
-	 	// type and slashCommandOptions, These are for Interactions
-	 	this.type = ["BOTH", "SLASH", "TEXT"].includes(options.type) ? options.type : "TEXT";
-		this.slashCommandOptions = options.slashCommandOptions || [];
 	 	this.run = options.run
 	 }
 	}
