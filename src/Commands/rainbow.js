@@ -7,22 +7,16 @@ module.exports = new Command({
     permission: "SEND_MESSAGES",
 
     async run(message, args, client) {
-        const embed = new Discord.MessageEmbed();
-        
-        embed
-        .setColor("#000000")
-        .setDescription("RAINBOW!")
+        const blackEmbed = new Discord.MessageEmbed()
+            .setColor("#000000")
+            .setDescription("RAINBOW!")
 
-        message.channel.send({ embeds: [embed] })
+        const whiteEmbed = new Discord.MessageEmbed()
+            .setColor("#FFFFFF")
+            .setDescription("RAINBOW!")
 
-        setTimeout(() => message.delete(), 1000);
-        
-        embed
-        .setColor("#FFFFFF")
-        .setDescription("RAINBOW!")
-
-        message.channel.send({ embeds: [embed] });
-
-        setTimeout(() => message.delete(), 1000);
+        // Edit Part Below
+        var Msg = await message.channel.send(blackEmbed); // sends message
+        Msg.edit(whiteEmbed) // edits message with newembed
     }
 })
