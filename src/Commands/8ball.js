@@ -17,9 +17,9 @@ module.exports = new Command({
         const embed = new Discord.MessageEmbed();
 
         embed
+            .setColor("#EB459E")
             .setTitle("8ball")
             .setDescription(`Your answer is: ` + doTheFuni8ball())
-            .setColor("#F940AB")
         message.reply({ embeds: [embed] });
     }
 });

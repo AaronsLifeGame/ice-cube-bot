@@ -5,16 +5,22 @@ module.exports = new Command({
     description: "Shows a List of Avaliable Commands!",
     permission: "SEND_MESSAGES",
 
-    async run(message,cargs,cclient) {
-        const msg = await message.reply(`
-**This Needs to be Set Up**
+    async run(message, args, client) {
+        const embed = new Discord.MessageEmbed();
 
-**!ping** - Shows the Ping of the Bot!
-**!hello** - Hello!
-**!embed** - Shows an Embed!
-**!invite** - Shows Invite Links!
+        embed
+        .setColor("#000000")
+        .setTitle("Help")
+        .setDescription(`
+            **!8ball [question]** - Ask the 8 Ball Anything! 
+            **!ping** - Shows the Ping of the Bot!
+            **!hello** - Hello!
+            **!embed** - Shows an Embed!
+            **!invite** - Shows Invite Links!
 
-**!help** - Shows this Message!
+            **!help** - Shows this Message!
             `)
+
+        message.reply({embeds: [embed]})        
     }
 })
