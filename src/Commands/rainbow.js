@@ -13,16 +13,16 @@ module.exports = new Command({
         .setColor("#000000")
         .setDescription("RAINBOW!")
 
-        message.send({ embeds: [embed] });
+        message.channel.send({ embeds: [embed] })
 
-        setTimeout(() => msg.delete(), 1000);
+        setTimeout(() => embed.delete(), 1000);
         
         embed
         .setColor("#FFFFFF")
         .setDescription("RAINBOW!")
 
-        message.send({ embeds: [embed] });
+        message.channel.send({ embeds: [embed] });
 
-        setTimeout(() => msg.delete(), 1000);
+        setTimeout(() => embed.delete(), 1000);
     }
 })
