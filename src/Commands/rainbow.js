@@ -15,7 +15,9 @@ module.exports = new Command({
 
         message.channel.send({ embeds: [embed] })
 
-        setTimeout(() => message.embed.delete(), 0);
+        .then(msg => {
+            msg.delete({ timeout: 1000 })
+        })
         
         embed
         .setColor("#FFFFFF")
@@ -23,6 +25,8 @@ module.exports = new Command({
 
         message.channel.send({ embeds: [embed] });
 
-        setTimeout(() => message.embed.delete(), 0);
+        .then(msg => {
+            msg.delete({ timeout: 1000 })
+        })
     }
 })
