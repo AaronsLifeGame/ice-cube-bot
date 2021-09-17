@@ -14,46 +14,15 @@ module.exports = new Command({
 
             message.send({embeds: [embed]});
 
-        const sentEmbed = await message.channel.send({ embeds: [embed] })
-            embed
-            .setColor("#ED4245")
-            .setDescription("RAINBOW!")
-
-            sentEmbed.edit({ embeds: [embed] })
-
-        const sentEmbed = await message.channel.send({ embeds: [embed] })
-            embed
-            .setColor("#FEE75C")
-            .setDescription("RAINBOW!")
-
-        sentEmbed.edit({ embeds: [embed] })
-
-        const sentEmbed = await message.channel.send({ embeds: [embed] })
-            embed
-            .setColor("#57F287")
-            .setDescription("RAINBOW!")
-
-        sentEmbed.edit({ embeds: [embed] })
-
-        const sentEmbed = await message.channel.send({ embeds: [embed] })
-            embed
-            .setColor("#5865F2")
-            .setDescription("RAINBOW!")
-
-        sentEmbed.edit({ embeds: [embed] })
-
-        const sentEmbed = await message.channel.send({ embeds: [embed] })
-            embed
-            .setColor("#EB459E")
-            .setDescription("RAINBOW!")
-
-        sentEmbed.edit({ embeds: [embed] })
-
-        const sentEmbed = await message.channel.send({ embeds: [embed] })
+        setTimeout(() => msg.delete(), 1000);
+        
             embed
             .setColor("#FFFFFF")
             .setDescription("RAINBOW!")
 
-        sentEmbed.edit({ embeds: [embed] })
+            message.send({embeds: [embed]});
+
+        setTimeout(() => msg.delete(), 1000);
+
     }
 })
