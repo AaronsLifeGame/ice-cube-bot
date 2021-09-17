@@ -8,21 +8,21 @@ module.exports = new Command({
 
     async run(message, args, client) {
         const embed = new Discord.MessageEmbed();
+        
         embed
-            .setColor("#000000")
-            .setDescription("RAINBOW!")
+        .setColor("#000000")
+        .setDescription("RAINBOW!")
 
-        message.send({embeds: [embed]});
+        message.send({ embeds: [embed] });
 
         setTimeout(() => msg.delete(), 1000);
         
         embed
-            .setColor("#FFFFFF")
-            .setDescription("RAINBOW!")
+        .setColor("#FFFFFF")
+        .setDescription("RAINBOW!")
 
-        message.send({embeds: [embed]});
+        message.send({ embeds: [embed] });
 
         setTimeout(() => msg.delete(), 1000);
-
     }
 })
