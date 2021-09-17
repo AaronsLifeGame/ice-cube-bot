@@ -18,7 +18,7 @@ module.exports = new Event("messageUpdate", async (client, message, newMessage, 
     .setColor("#FEE75C")
     .setTitle(`Message Updated!`)
     .setDescription(`
-        ${log.executor) has Edited *${message}*!
+        ${log.executor} has Edited *${message}*!
         Message Updated to *${newMessage}*!
         `)
     
