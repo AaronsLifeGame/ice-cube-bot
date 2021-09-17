@@ -15,7 +15,7 @@ module.exports = new Event("roleUpdate", async (client, role) => {
     const log = fetchedLogs.entries.first();
 
     const embed = new Discord.MessageEmbed()
-    .setColor("#5865F2")
+    .setColor("#FEE75C")
     .setTitle(`Role Updated!`)
     .setDescription(`
         ${log.executor} has Edited *@${role.name}*!

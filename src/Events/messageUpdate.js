@@ -15,11 +15,11 @@ module.exports = new Event("messageUpdate", async (client, message, newMessage, 
     const log = fetchedLogs.entries.first();
 
     const embed = new Discord.MessageEmbed()
-    .setColor("#5865F2")
+    .setColor("#FEE75C")
     .setTitle(`Message Updated!`)
     .setDescription(`
         ${log.executor} has Edited *${message}*!
-        Message Updated to ${newMessage}!
+        Message Updated to *${newMessage}*!
         `)
     
     logChannel.send({ embeds: [embed] });

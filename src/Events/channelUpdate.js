@@ -15,7 +15,7 @@ module.exports = new Event("channelUpdate", async (client, channel) => {
     const log = fetchedLogs.entries.first();
 
     const embed = new Discord.MessageEmbed()
-    .setColor("#5865F2")
+    .setColor("#FEE75C")
     .setTitle(`Channel Update!`)
     .setDescription(`
         ${log.executor} has Edited *#${channel.name}*!
