@@ -1,9 +1,13 @@
 const Command = require("../Structures/Command.js");
+const Discord = require("discord.js");
 
 module.exports = new Command({
     name: "rainbow",
     description: "Shows a Short Rainbow Embed!",
     permission: "SEND_MESSAGES",
+
+    // const sentEmbed = await message.channel.send({ embeds: [embed] })
+    // sentEmbed.edit({ embeds: [embed] })
 
     async run(message, args, client) {
         const embed = new Discord.MessageEmbed();

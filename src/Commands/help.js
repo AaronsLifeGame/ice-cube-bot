@@ -1,4 +1,5 @@
 const Command = require("../Structures/Command.js");
+const Discord = require("discord.js");
 
 module.exports = new Command({
     name: "help",
@@ -21,6 +22,6 @@ module.exports = new Command({
             **!help** - Shows this Message!
             `)
 
-        message.reply({embeds: [embed]})        
+        message.reply({ embeds: [embed] })        
     }
 })
