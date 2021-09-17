@@ -18,6 +18,7 @@ module.exports = new Command({
             **!hello** - Hello!
             **!embed** - Shows an Embed!
             **!invite** - Shows Invite Links!
+            **!rainbow** - Shows a Short Rainbow Embed!
 
             **!help** - Shows this Message!
             `)
