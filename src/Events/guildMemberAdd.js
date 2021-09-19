@@ -35,7 +35,7 @@ module.exports = new Event("guildMemberAdd", (client, member) => {
 	.setColor("message-box", "#FFFFFF")
 	.setColor("border", "#FFFFFF")
 	.setColor("avatar", "#FFFFFF")
-	.setBackground("https://drive.google.com/file/d/1v85s_RUxjNpC5cDaWAkj3cXL7zRBWQ5w/view?usp=sharing")
+	.setBackground("https://media.discordapp.net/attachments/885314193400664064/889000013542359101/banner.png")
 	.setMemberCount(member.guild.memberCount)
 
 	let attachment = new Discord.MessageAttachment(await welcomeCard.build(), ("welcome.png"))
