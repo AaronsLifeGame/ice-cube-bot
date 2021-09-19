@@ -24,6 +24,7 @@ module.exports = new Event("guildMemberAdd", (client, member) => {
 	channel.send({ embeds: [embed] });
 });
 
+/*
 // Welcome Card
 module.exports = new Event("guildMemberAdd", (message, args, client, member) => {
 
@@ -48,3 +49,4 @@ module.exports = new Event("guildMemberAdd", (message, args, client, member) => 
 	let attachment = new Discord.MessageAttachment(await welcomeCard.build(), ("welcome.png")),
 	member.guild.channels.cache.get("885293154566275113").send(member.user.toString(), attachment)
 });
+*/
