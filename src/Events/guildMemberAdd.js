@@ -45,6 +45,6 @@ module.exports = new Event("guildMemberAdd", (client, member) => {
 	.setBackground("https://media.discordapp.net/attachments/885314193400664064/889000013542359101/banner.png")
 	.setMemberCount(member.guild.memberCount)
 
-	let attachment = new Discord.MessageAttachment(await welcomeCard.build(), ("welcome.png"))
+	let attachment = new Discord.MessageAttachment(await welcomeCard.build(), ("welcome.png")),
 	member.guild.channels.cache.get("885293154566275113").send(member.user.toString(), attachment)
 });
