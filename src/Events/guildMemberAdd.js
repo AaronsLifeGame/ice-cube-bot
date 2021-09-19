@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 
 const canvacord = require("canvacord");
 
+// Welcome Logs
 module.exports = new Event("guildMemberAdd", (client, member) => {
 
 	const channel = member.guild.channels.cache.find(c => c.name == "logs");
@@ -21,9 +22,15 @@ module.exports = new Event("guildMemberAdd", (client, member) => {
 	.setThumbnail(member.user.avatarURL({dynamic: true}))
 
 	channel.send({ embeds: [embed] });
+});
 
-	// Welcome Card
-	if(member.guild.id !== "885291653668167681") return;
+// Welcome Card
+module.exports = new Event("guildMemberAdd", (client, member) => {
+
+	const channel = member.guild.channels.cache.find(c => c.name == "welcome");
+
+	if (!channel) return;
+
 	const welcomeCard = new canvacord.Welcomer()
 
 	.setUsername(member.user.username)
