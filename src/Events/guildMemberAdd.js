@@ -25,7 +25,7 @@ module.exports = new Event("guildMemberAdd", (client, member) => {
 });
 
 // Welcome Card
-module.exports = new Event("guildMemberAdd", (client, member) => {
+module.exports = new Event("guildMemberAdd", (message, args, client, member) => {
 
 	const channel = member.guild.channels.cache.find(c => c.name == "welcome");
 
