@@ -2,9 +2,15 @@ const Command = require("../Structures/Command");
 
 module.exports = new Command({
 	name: "clear",
-	description: "Clears an amount of messages",
+	description: "Clear an amount of messages",
+	type: "SLASH",
+	slashCommandOptions: [{
+		name: "amount",
+		description: "The amount of messages to clear",
+		type: "INTEGER",
+		required: true
+	}],
 	permission: "MANAGE_MESSAGES",
-	
 	async run(message, args, client) {
 		const amount = args[1];
 
@@ -13,18 +19,21 @@ module.exports = new Command({
 				`${
 					amount == undefined ? "Nothing" : amount
 				} is not a valid number!`
-				);
+			);
 
 		const amountParsed = parseInt(amount);
 
-		if (amountParsed > 100) return message.reply("You can not clear more than 100 Messages!");
+		if (amountParsed > 100)
+			return message.reply("You cannot clear more than 100 messages!");
 
 		message.channel.bulkDelete(amountParsed);
-		
-		const msg = await message.channel.send(
+
+		const msg = await message.reply(
 			`Cleared ${amountParsed} messages!`
-			);
+		);
+
 		
-		setTimeout(() => msg.delete(), 5000);
+
+		if (msg) setTimeout(() => msg.delete(), 5000);
 	}
 });

@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+
 const Client = require("./Client.js");
 
 /**
@@ -6,20 +7,20 @@ const Client = require("./Client.js");
  * @param {Client} client
  * @param {Discord.ClientEvents[K]} eventArgs
  */
- function RunFuction(client, ...eventArgs) {}
+function RunFunction(client, ...eventArgs) {}
 
 /**
  * @template {keyof Discord.ClientEvents} K
  */
- class Event {
+class Event {
 	/**
 	 * @param {K} event
-	 * @param {RunnFunction<K>} runFunction
+	 * @param {RunFunction<K>} runFunction
 	 */
-	 constructor(event, runFunction) {
-	 	this.event = event;
-	 	this.run = runFunction;
-	 }
-	};
+	constructor(event, runFunction) {
+		this.event = event;
+		this.run = runFunction;
+	}
+}
 
-	module.exports = Event;
+module.exports = Event;
