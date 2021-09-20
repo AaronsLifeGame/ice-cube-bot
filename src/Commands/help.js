@@ -18,7 +18,9 @@ module.exports = new Command({
             **!hello** - Hello!
             **!embed** - Shows an Embed!
             **!invite** - Shows Invite Links!
-            **!rainbow** - Shows a Short Rainbow Embed!
+            **!kill [user]** - Kills the Mentioned User!
+            **!nameme** - Gives user a New Skill Based Name!
+            
 
             **!help** - Shows this Message!
             `)
