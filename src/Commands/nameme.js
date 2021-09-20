@@ -7,6 +7,6 @@ module.exports = new Command({
 	
 	async run(message, args, client) {
 		let nicknames = ["Newbie", "Novice", "Amateur", "Skilled", "Veteran", "Advanced", "Pro", "Elite", "Master", "God"]
-		message.reply(`${nicknames[Math.floor(Math.random() * nicknames.lenght)]} is your New Name!`);
+		message.reply(`${nicknames[Math.floor(Math.random() * nicknames.length)]} is your New Name!`);
 	}
 });

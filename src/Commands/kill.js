@@ -6,7 +6,7 @@ module.exports = new Command({
 	permission: "SEND_MESSAGES",
 
 	async run(message, args, client) {
-		if(message.content.startsWith(`$(name)`)) {
+		if(message.content.startsWith(`!kill`)) {
 			let victim = message.mentions.users.first()
 			if(!victim) message.reply("Mention someone to Kill")
 			else {
