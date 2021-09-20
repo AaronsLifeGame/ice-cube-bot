@@ -8,20 +8,27 @@ module.exports = new Event("messageCreate", (client, message) => {
 	 * fs.appendFileSync("./src/Data/logs.txt", `${timestamp} - ${member.user}: ${message.content} \n`);
      */
 
-	if (message.author.bot) return;
-	if (!message.content.startsWith(client.prefix)) return;
+    if (message.author.bot) return;
 
-	const args = message.content.substring(client.prefix.length).split(/ +/);
-	const command = client.commands.find(cmd => cmd.name == args[0]);
+    if (!message.content.startsWith(client.prefix)) return;
 
-	if (!command) return message.reply(`${args[0]} is not a vaild Command`);
+    const args = message.content.substring(client.prefix.length).split(/ +/);
 
-	const permission = message.member.permissions.has(command.permission, true);
+    const command = client.commands.find(cmd => cmd.name == args[0]);
 
-	if (!permission)
-		return message.reply(
-			`You do not have the Permission \`${command.permission}\` to run this Command!`
-			);
+    if (!command) return message.reply(`${args[0]} is not a valid command!`);
 
-	command.run(message, args, client);
+    if (!["BOTH", "TEXT"].includes(command.type))
+        return message.reply(
+            "That command is only available via slash command!"
+        );
+
+    const permission = message.member.permissions.has(command.permission, true);
+
+    if (!permission)
+        return message.reply(
+            `You do not have the permission \`${command.permission}\` to run this command!`
+        );
+
+    command.run(message, args, client);
 });
