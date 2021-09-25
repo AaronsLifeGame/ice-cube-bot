@@ -12,10 +12,12 @@
   "author": "AaronsLG",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.6.0",
     "canvacord": "^5.2.3",
     "discord-canvas": "^1.4.1",
     "discord.js": "^13.2.0-dev.1631232307.3183b11",
     "dotenv": "^10.0.0",
-    "fero-dc": "^2.0.5"
+    "fero-dc": "^2.0.5",
+    "ffmpeg-static": "^4.4.0"
   }
 }

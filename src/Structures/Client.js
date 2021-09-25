@@ -6,6 +6,13 @@ const config = require("../Data/config.json");
 const intents = new Discord.Intents(32767);
 const fs = require("fs");
 
+const distube = require("distube")
+client.distube = new Distube(client, { searchSongs: false, emitNewSongOnly: true});
+client.distube
+	.on("playSong", (message, queue, song) => message.channel.send(
+		`Playing **${song.name}** - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
+	))
+
 class Client extends Discord.Client {
 	constructor() {
 		super({ intents });

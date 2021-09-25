@@ -21,6 +21,7 @@ module.exports = new Command({
             **!kill [user]** - Kills the Mentioned User!
             **!nameme** - Gives user a New Skill Based Name!
             
+            **musicHelp** - Shows a List of Music Commands!
 
             **!help** - Shows this Message!
             `)
