@@ -6,7 +6,7 @@ const config = require("./Data/config.json");
 const client = new Client();
 
 const distube = require("distube")
-client.distube = new Distube(client, { searchSongs: false, emitNewSongOnly: true});
+client.distube = new distube(client, { searchSongs: false, emitNewSongOnly: true});
 client.distube
 	.on("playSong", (message, queue, song) => message.channel.send(
 		`Playing **${song.name}** - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
