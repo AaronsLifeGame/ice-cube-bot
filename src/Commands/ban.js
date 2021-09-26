@@ -13,8 +13,8 @@ module.exports = new Command({
 	},
 	{
 		name: "reason",
-		description: "Reason for Banning!"
-		type: "STRING"
+		description: "Reason for Banning!",
+		type: "STRING",
 		required: false
 	}],
 	permission: "MANAGE_MEMBERS",
