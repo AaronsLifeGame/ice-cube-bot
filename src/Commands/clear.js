@@ -8,7 +8,7 @@ module.exports = new Command({
 		name: "amount",
 		description: "The amount of messages to clear",
 		type: "INTEGER",
-		required: false
+		required: true
 	}],
 	permission: "MANAGE_MESSAGES",
 	async run(message, args, client) {
