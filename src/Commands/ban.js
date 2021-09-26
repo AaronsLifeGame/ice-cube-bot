@@ -33,5 +33,5 @@ module.exports = new Command({
 			return interaction.reply("> Cannot Ban the Member!")
 		}
 		interaction.reply(`> Successfully banned ${user.tag}\nReason: ${Reason}`)
-	};
+	}
 });
