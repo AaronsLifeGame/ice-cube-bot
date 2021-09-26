@@ -27,10 +27,11 @@ module.exports = new Command({
 		if(!member) return interaction.reply("> The User doesn't exist in this Server!")
 		if(!Reason) Reason = "No Reason Provided!"
 
-		await interaction.guild.members.ban(member, { reason: Reason})
-		interaction.reply(`> Successfully banned ${user.tag}`)
-		.catch(() => {
-			interaction.reply("> Cannot Ban the Member!")
-		})
+		try {
+			await interaction.guild.members.ban(member, { reason: Reason})
+		} catch(e) {
+			return interaction.reply("> Cannot Ban the Member!")
+		}
+		interaction.reply(`> Successfully banned ${user.tag}\nReason: ${Reason}`)
 	};
 });

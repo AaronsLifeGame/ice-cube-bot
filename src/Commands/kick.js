@@ -17,5 +17,5 @@ module.exports = new Command({
 		type: "STRING"
 		required: false
 	}],
-	permission: "MANAGE_MESSAGES",
+	permission: "MANAGE_MEMBERS",
 });

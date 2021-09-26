@@ -6,6 +6,6 @@ module.exports = new Command({
 	permission: "SEND_MESSAGES",
 	
 	async run(message, args, client) {
-		message.reply("Hello!");
+		message.reply("> Hello!");
 	}
 });
