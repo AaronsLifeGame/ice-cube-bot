@@ -1,12 +1,12 @@
 const Command = require("../Structures/Command");
 
 module.exports = new Command({
-	name: "clear",
-	description: "Clear an amount of messages",
+	name: "purge",
+	description: "Purges a Channel",
 	type: "SLASH",
 	slashCommandOptions: [{
 		name: "amount",
-		description: "The amount of messages to clear",
+		description: "The amount of messages to purge",
 		type: "INTEGER",
 		required: false
 	}],
@@ -23,13 +23,13 @@ module.exports = new Command({
 
 		const amountParsed = parseInt(amount);
 
-		if (amountParsed > 100)
-			return message.reply("You cannot clear more than 100 messages!");
+		if (amountParsed > 1000)
+			return message.reply("You cannot clear more than 1000 messages!");
 
 		message.channel.bulkDelete(amountParsed);
 
 		const msg = await message.reply(
-			`> Cleared ${amountParsed} messages!`
+			`> Purged ${amountParsed} messages!`
 		);
 
 		

@@ -10,7 +10,7 @@ module.exports = new Command({
 			let victim = message.mentions.users.first()
 			if(!victim) message.reply("Mention someone to Kill")
 			else {
-				message.channel.send(`${victim} Died lol`)
+				message.channel.send(`> ${victim} Died lol`)
 			}
 		}
 	}

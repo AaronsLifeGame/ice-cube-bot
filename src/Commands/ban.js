@@ -1,14 +1,15 @@
+// ban command
 const Command = require("../Structures/Command");
 
 module.exports = new Command({
-	name: "clear",
-	description: "Clear an amount of messages",
+	name: "ban",
+	description: "Bans the Mentioned User!",
 	type: "SLASH",
 	slashCommandOptions: [{
-		name: "amount",
-		description: "The amount of messages to clear",
-		type: "INTEGER",
-		required: false
+		name: "target",
+		description: "The Target you want to Ban!",
+		type: "USER",
+		required: true
 	}],
 	permission: "MANAGE_MESSAGES",
 	async run(message, args, client) {
