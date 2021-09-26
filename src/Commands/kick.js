@@ -1,5 +1,6 @@
 // ban command
 const Command = require("../Structures/Command");
+const interaction = require("../Events/interactionCreate.js");
 
 module.exports = new Command({
 	name: "kick",
