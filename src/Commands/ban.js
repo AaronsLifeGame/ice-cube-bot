@@ -12,4 +12,4 @@ module.exports = new Command({
 		required: true
 	}],
 	permission: "MANAGE_MESSAGES",
-	
+});
