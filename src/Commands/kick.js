@@ -7,7 +7,7 @@ module.exports = new Command({
 	description: "Kicks the Mentioned User!",
 	type: "SLASH",
 	slashCommandOptions: [{
-		name: "user",
+		name: "target",
 		description: "The User you want to Kick!",
 		type: "USER",
 		required: true

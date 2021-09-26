@@ -7,7 +7,7 @@ module.exports = new Command({
 	description: "Bans the Mentioned User!",
 	type: "SLASH",
 	slashCommandOptions: [{
-		name: "user",
+		name: "target",
 		description: "The User you want to Ban!",
 		type: "USER",
 		required: true
@@ -21,7 +21,7 @@ module.exports = new Command({
 	permission: "MANAGE_MEMBERS",
 
 	async run(message, args, client) {
-		const user = interaction.slashCommandOptions.getUser("user")
+		const user = interaction.slashCommandOptions.getTarget("user")
 		let Reason = interaction.slashCommandOptions.getString("reason")
 		const member = interaction.guild.members.cacheget(user.id)
 		
