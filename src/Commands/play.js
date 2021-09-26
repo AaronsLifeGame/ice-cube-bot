@@ -1,3 +1,6 @@
+const Command = require("../Structures/Command.js");
+const Discord = require("discord.js");
+
 module.exports.run = async (bot, message, args) => {
 	const music = args.join(" ");
 
