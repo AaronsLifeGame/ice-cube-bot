@@ -1,13 +1,7 @@
 const Event = require("../Structures/Event.js");
-const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports = new Event("messageCreate", (client, message) => {
-	
-	// Server Logger, "logs.txt"
-	if (message.guild.id == "885291653668167681") 
-	fs.appendFileSync("./src/Data/logs.txt", `${message.content} \n`);
-    
 
     if (message.author.bot) return;
 
