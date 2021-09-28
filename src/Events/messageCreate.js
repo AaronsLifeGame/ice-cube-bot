@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports = new Event("messageCreate", (client, message) => {
 	
-	Server Logger, "logs.txt"
+	// Server Logger, "logs.txt"
 	if (message.guild.id == "885291653668167681") 
 	fs.appendFileSync("./src/Data/logs.txt", `${member.user}: ${message.content} \n`);
     
