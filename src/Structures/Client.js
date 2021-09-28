@@ -1,10 +1,10 @@
-const { Intents, Discord } = require('discord.js');
+const Discord = require('discord.js');
 
 const Command = require("./Command.js");
 const Event = require("./Event.js")
 const config = require("../Data/config.json");
 
-const Intents = new Discord.Intents(32767);
+const intents = new Discord.Intents(32767);
 const fs = require("fs");
 
 class Client extends Discord.Client {
