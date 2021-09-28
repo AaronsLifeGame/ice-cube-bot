@@ -21,7 +21,7 @@ const embed = new Discord.MessageEmbed()
   { name: "Ping:",value: `\`\`\`${Math.round(message.client.ws.ping)} ms\`\`\``, inline: true },
   { name: "RAM: ", value: `\`\`\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\`\`\``, inline: true  },
 )
-  .setColor("3498DB")
+  .setColor("5865F2")
 
   message.reply({embeds: [embed]})
 }})

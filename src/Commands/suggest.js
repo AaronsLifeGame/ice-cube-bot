@@ -16,7 +16,7 @@ module.exports = new Command({
         .setDescription(`${suggestmessage}`)
         .setTimestamp()
         .setFooter(`${message.author.username}`)
-        .setColor("RANDOM")
+        .setColor("#FEE75C")
         
 
         let msg = await channel.send({embeds: [suggestembed]});
