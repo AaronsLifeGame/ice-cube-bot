@@ -1,4 +1,5 @@
 const Event = require("../Structures/Event.js");
+const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports = new Event("messageCreate", (client, message) => {
