@@ -15,7 +15,7 @@ module.exports = new Event("channelDelete", async (client, channel) => {
     const log = fetchedLogs.entries.first();
 
     const embed = new Discord.MessageEmbed()
-    .setColor("#5865F2")
+    .setColor("#ED4245")
     .setTitle(`Channel Deleted!`)
     .setDescription(`
         ${log.executor} has Deleted *#${channel.name}*!

@@ -7,7 +7,7 @@ module.exports = new Command({
 
     async run(message, args, client, member, guild){
 
-        const channel = message.guild.channels.cache.get('885317642188099614'); //change the channel id to your channel id
+        const channel = message.guild.channels.cache.get("885317642188099614");
 
         let suggestmessage = args.slice(1).join(' ');
 
@@ -28,7 +28,7 @@ module.exports = new Command({
         let sentembed = new Discord.MessageEmbed()
         .setTitle('Success')
         .setDescription(`Succesfully sent the suggestion: ${suggestmessage}`)
-        .setColor('RANDOM')
+        .setColor('#EB459E')
         .setTimestamp()
         .setFooter(`${message.author.username}`);
 
