@@ -5,7 +5,7 @@ const {
 const {
     MessageEmbed
 } = require('discord.js')
-const client = require('../index')
+const client = require('../Events/interactionCreate.js')
 
 client.on("interactionCreate", async (interaction) => {
 
