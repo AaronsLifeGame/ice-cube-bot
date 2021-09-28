@@ -1,4 +1,5 @@
-const Discord = require("discord.js");
+const { Client, Intents, Discord } = require('discord.js');
+
 const Command = require("./Command.js");
 const Event = require("./Event.js")
 const config = require("../Data/config.json");
