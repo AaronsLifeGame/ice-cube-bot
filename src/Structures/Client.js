@@ -4,7 +4,7 @@ const Command = require("./Command.js");
 const Event = require("./Event.js")
 const config = require("../Data/config.json");
 
-const intents = new Discord.Intents(32767);
+const Intents = new Discord.Intents(32767);
 const fs = require("fs");
 
 class Client extends Discord.Client {
