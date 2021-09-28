@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 module.exports = new Command({
     name: 'suggest',
     description: 'suggestion command',
+    permission: "SEND_MESSAGES",
 
     async run(message, args, client, member, guild){
 
@@ -16,7 +17,7 @@ module.exports = new Command({
         .setDescription(`${suggestmessage}`)
         .setTimestamp()
         .setFooter(`${message.author.username}`)
-        .setColor("#FEE75C")
+        .setColor("#57F287")
         
 
         let msg = await channel.send({embeds: [suggestembed]});
