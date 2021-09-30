@@ -77,24 +77,14 @@ class Client extends Discord.Client {
 
 			this.login(process.env.TOKEN);		
 		}
-	}
+	
+		// Music Bot Stuff
+		client.config = require('../config');
 
-	// Music Bot Stuff
-	global.client = new Client({
-	    intents: [
-	        Intents.FLAGS.GUILDS,
-	        Intents.FLAGS.GUILD_MEMBERS,
-	        Intents.FLAGS.GUILD_MESSAGES,
-	        Intents.FLAGS.GUILD_VOICE_STATES
-	    ],
-	    disableMentions: 'everyone',
-	});
+		global.player = new Player(client, client.config.opt.discordPlayer);
 
-	client.config = require('../config');
-
-	global.player = new Player(client, client.config.opt.discordPlayer);
-
-	require('../loader');
-	require('../events');
+		require('../loader');
+		require('../events');
+	}	
 
 	module.exports = Client;
