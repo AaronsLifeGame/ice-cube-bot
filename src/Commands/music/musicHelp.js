@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 
 module.exports = new Command({
     name: "musicHelp",
+    aliases: ['musichelp'],
     description: "Shows a List of Music Commands!",
     permission: "SEND_MESSAGES",
 
@@ -25,7 +26,7 @@ module.exports = new Command({
             **!save** - Saves the Current Queue for Later!
             **!clear** - Clears Queue!
 
-            **!nowplaying** - Shows what Song is Now Playing!
+            **!nowPlaying** - Shows what Song is Now Playing!
             **!progress** - Shows the Progress through Current Song!
             **!queue** - Shows The List of Songs in the Queue!
             **!shuffle** - Shuffles Queue!

@@ -1,8 +1,8 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-    name: 'nowplaying',
-    aliases: ['np'],
+    name: 'nowPlaying',
+    aliases: ['np', 'nowplaying'],
     utilisation: '{prefix}nowplaying',
     voiceChannel: true,
 

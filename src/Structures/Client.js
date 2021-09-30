@@ -24,12 +24,6 @@ class Client extends Discord.Client {
 		const commandFiles = fs.readdirSync("./src/Commands")
 			.filter(file => file.endsWith(".js"));
 
-		const commandFiles = fs.readdirSync("./src/Commands/Staff")
-			.filter(file => file.endsWith(".js"));
-
-		const commandFiles = fs.readdirSync("./src/Commands/Music")
-			.filter(file => file.endsWith(".js"));
-
 			/**
 			 * @type {Command[]}
 			 */
