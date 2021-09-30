@@ -22,7 +22,13 @@ class Client extends Discord.Client {
 		start(token) {
 		// Command Handler
 		const commandFiles = fs.readdirSync("./src/Commands")
-			.filter(file => file.endsWith(""));
+			.filter(file => file.endsWith(".js"));
+
+		const commandFiles = fs.readdirSync("./src/Commands/Staff")
+			.filter(file => file.endsWith(".js"));
+
+		const commandFiles = fs.readdirSync("./src/Commands/Music")
+			.filter(file => file.endsWith(".js"));
 
 			/**
 			 * @type {Command[]}
