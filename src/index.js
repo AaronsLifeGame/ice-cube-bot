@@ -5,13 +5,24 @@ const Client = require("./Structures/Client.js");
 const config = require("./Data/config.json");
 const client = new Client();
 
-// Discord Player..
-	const player = require('discord-player');
+const { Player } = require('discord-player');
+const { Client, Intents } = require('discord.js');
 
-	player = new Player();
+global.client = new Client({
+    intents: [
+        Intents.FLAGS.GUILDS,
+        Intents.FLAGS.GUILD_MEMBERS,
+        Intents.FLAGS.GUILD_MESSAGES,
+        Intents.FLAGS.GUILD_VOICE_STATES
+    ],
+    disableMentions: 'everyone',
+});
 
-	require('./loader');
-	require('./events');
-// ..End
+client.config = require('./config');
+
+global.player = new Player(client, client.config.opt.discordPlayer);
+
+require('./loader');
+require('./events');
 
 client.start(process.env.TOKEN);
