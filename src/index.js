@@ -1,11 +1,10 @@
 console.clear();
 require('dotenv').config();
 
-const Client = require("./Structures/Client.js");
+const { Client, Intents } = require("./Structures/Client.js");
 const config = require("./Data/config.json");
 
 const { Player } = require('discord-player');
-const { Client, Intents } = require('discord.js');
 
 global.client = new Client({
     intents: [
