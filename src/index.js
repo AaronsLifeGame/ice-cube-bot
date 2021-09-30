@@ -1,12 +1,12 @@
 console.clear();
 require('dotenv').config();
 
-const { Client, Intents } = require("./Structures/Client.js");
+const { Client, intents } = require("./Structures/Client.js");
 const config = require("./Data/config.json");
 
 const { Player } = require('discord-player');
 
-global.client = new Client({
+const client = new Client({
     intents: [
         Intents.FLAGS.GUILDS,
         Intents.FLAGS.GUILD_MEMBERS,
@@ -18,7 +18,7 @@ global.client = new Client({
 
 client.config = require('./config');
 
-global.player = new Player(client, client.config.opt.discordPlayer);
+player = new Player(client, client.config.opt.discordPlayer);
 
 require('./loader');
 require('./events');
