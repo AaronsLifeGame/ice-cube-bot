@@ -1,4 +1,4 @@
-const { Discord, Client, Intents } = require('discord.js');
+const Discord = require('discord.js');
 
 const Command = require("./Command.js");
 const Event = require("./Event.js")
