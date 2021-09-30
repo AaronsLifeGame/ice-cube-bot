@@ -1,6 +1,4 @@
-const { Player } = require('discord-player');
-const { Discord, Client, Intents } = require('discord.js');
-
+const Discord = require("discord.js");
 const Command = require("./Command.js");
 const Event = require("./Event.js")
 const config = require("../Data/config.json");
@@ -77,14 +75,6 @@ class Client extends Discord.Client {
 
 			this.login(process.env.TOKEN);		
 		}
-	
-		// Music Bot Stuff
-		client.config = require('../config');
-
-		global.player = new Player(client, client.config.opt.discordPlayer);
-
-		require('../loader');
-		require('../events');
-	}	
+	}
 
 	module.exports = Client;
