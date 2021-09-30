@@ -3,10 +3,9 @@ require('dotenv').config();
 
 const { Client, Intents } = require("./Structures/Client.js");
 const config = require("./Data/config.json");
+const client = new Client();
 
 const { Player } = require('discord-player');
-
-const client = new Client();
 
 client.config = require('./config');
 
