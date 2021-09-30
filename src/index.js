@@ -6,9 +6,9 @@ const config = require("./Data/config.json");
 const client = new Client();
 
 // Discord Player..
-	const { Player } = require('discord-player');
+	const player = require('discord-player');
 
-	player = new Player(client, client.config.opt.discordPlayer);
+	player = new Player();
 
 	require('./loader');
 	require('./events');
