@@ -46,15 +46,6 @@ class Client extends Discord.Client {
 				defaultPermission: true
 			}));
 
-			slashCommands.forEach(file => {
-				/**
-				 * @type {Command}
-				 */
-				const slashCommands = require(`../Commands/interaction/${file}`);
-				console.log(`interaction ${slashCommands.name} loaded`);
-				this.slashCommands.set(slashCommand.name, slashCommand);
-			});
-
 		// Event Handler
 		this.removeAllListeners();
 
