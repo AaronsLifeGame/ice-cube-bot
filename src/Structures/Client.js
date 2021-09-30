@@ -33,14 +33,14 @@ class Client extends Discord.Client {
 		const directory = fs.readdirSync('./src/Commands')
 		   	directory.forEach(dir => {
 		      	const commandFiles = fs.readdirSync(`./src/Commands/${dir}`)
-		      	filter(file => file.endsWith('.js'))
+		      	.filter(file => file.endsWith('.js'))
 		      	/**
 		      	* @type {Command[]}
 		      	*/
 		      	const commands = commandFiles.map(file => require(`../Commands/${dir}/${file}`));
 		            
 		      	commands.forEach(cmd => {
-		          	console.log(`Command ${cmd.name} loaded`)
+		          	console.log(`${dir.name} ${cmd.name} loaded`)
 		          	this.commands.set(cmd.name, cmd)
 		      	});
 		   	})
@@ -55,14 +55,14 @@ class Client extends Discord.Client {
 				defaultPermission: true
 			}));
 
-			// .forEach(file => {
-			// 	/**
-			// 	 * @type {Command}
-			// 	 */
-			// 	const command = require(`../Commands/${file}`);
-			// 	console.log(`Command ${command.name} loaded`);
-			// 	this.commands.set(command.name, command);
-			// });
+			.forEach(file => {
+				/**
+				 * @type {Command}
+				 */
+				const slashCommands = require(`../Commands/interaction/${file}`);
+				console.log(`interaction ${slashCommands.name} loaded`);
+				this.slashCommands.set(slashCommand.name, slashCommand);
+			});
 
 		// Event Handler
 		this.removeAllListeners();
