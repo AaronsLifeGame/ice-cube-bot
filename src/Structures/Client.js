@@ -21,15 +21,6 @@ class Client extends Discord.Client {
 
 		start(token) {
 		// Command Handler
-
-		const commandFiles = fs.readdirSync("./src/Commands")
-			.filter(file => file.endsWith(".js"));
-
-			/**
-			 * @type {Command[]}
-			 */
-		const commands = commandFiles.map(file => require(`../Commands/${file}`));
-
 		const directory = fs.readdirSync('./src/Commands')
 		   	directory.forEach(dir => {
 		      	const commandFiles = fs.readdirSync(`./src/Commands/${dir}`)
@@ -55,7 +46,7 @@ class Client extends Discord.Client {
 				defaultPermission: true
 			}));
 
-			.forEach(file => {
+			slashCommands.forEach(file => {
 				/**
 				 * @type {Command}
 				 */
