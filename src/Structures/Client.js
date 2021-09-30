@@ -21,6 +21,15 @@ class Client extends Discord.Client {
 
 		start(token) {
 		// Command Handler
+
+		const commandFiles = fs.readdirSync("./src/Commands")
+			.filter(file => file.endsWith(".js"));
+
+			/**
+			 * @type {Command[]}
+			 */
+		const commands = commandFiles.map(file => require(`../Commands/${file}`));
+
 		const directory = fs.readdirSync('./src/Commands')
 		   	directory.forEach(dir => {
 		      	const commandFiles = fs.readdirSync(`./src/Commands/${dir}`)
@@ -30,16 +39,11 @@ class Client extends Discord.Client {
 		      	*/
 		      	const commands = commandFiles.map(file => require(`../Commands/${dir}/${file}`));
 		            
-		      	.forEach(cmd => {
+		      	commands.forEach(cmd => {
 		          	console.log(`Command ${cmd.name} loaded`)
 		          	this.commands.set(cmd.name, cmd)
 		      	});
 		   	})
-
-		commands.forEach(cmd => {
-			console.log(`Command ${cmd.name} loaded`);
-			this.commands.set(cmd.name, cmd);
-		});
 
 		const slashCommands = commands
 			.filter(cmd => ["BOTH", "SLASH"].includes(cmd.type))
