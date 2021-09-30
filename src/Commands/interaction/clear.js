@@ -1,4 +1,4 @@
-const Command = require("../Structures/Command");
+const Command = require("../../Structures/Command");
 
 module.exports = new Command({
 	name: "clear",
