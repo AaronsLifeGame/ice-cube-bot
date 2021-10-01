@@ -34,6 +34,7 @@ module.exports = new Command({
 			return interaction.reply("> Cannot Ban the Member!")
 		}
 		interaction.reply(`> Successfully banned ${user.tag}\nReason: ${Reason}`)
+		
+		message.reply(args[1])
 	}
-	execute(message, args, client);
 });
