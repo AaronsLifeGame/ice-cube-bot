@@ -22,7 +22,7 @@ class Client extends Discord.Client {
 		start(token) {
 
 		// Command Handler
-		let slashcommands = [
+		let slashcommands = []
 			 const directory = fs.readdirSync('./src/Commands')
 			   directory.forEach(dir => {
 			      const commandFiles = fs.readdirSync(`./src/Commands/${dir}`)
@@ -38,7 +38,6 @@ class Client extends Discord.Client {
 			      slashcommands.push(cmd)     
 				});
 			 })
-		]
 
 		const slashCommands = slashcommands
 			.filter(cmd => ["BOTH", "SLASH"].includes(cmd.type))
