@@ -26,7 +26,7 @@ class Client extends Discord.Client {
 			 const directory = fs.readdirSync('./src/Commands')
 			   directory.forEach(dir => {
 			      const commandFiles = fs.readdirSync(`./src/Commands/${dir}`)
-			      filter(file => file.endsWith('.js'))
+			      .filter(file => file.endsWith('.js'))
 			      /**
 			      * @type {Command[]}
 			      */
