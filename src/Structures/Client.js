@@ -31,7 +31,7 @@ class Client extends Discord.Client {
 		      	const commands = commandFiles.map(file => require(`../Commands/${dir}/${file}`));
 		            
 		      	commands.forEach(cmd => {
-		          	console.log(`${dir.name} ${cmd.name} loaded`)
+		          	console.log(`Command ${cmd.name} loaded`)
 		          	this.commands.set(cmd.name, cmd)
 		      	});
 		   	})
@@ -45,6 +45,15 @@ class Client extends Discord.Client {
 				options: cmd.slashCommandOptions,
 				defaultPermission: true
 			}));
+
+			// .forEach(file => {
+			// 	/**
+			// 	 * @type {Command}
+			// 	 */
+			// 	const command = require(`../Commands/${file}`);
+			// 	console.log(`Command ${command.name} loaded`);
+			// 	this.commands.set(command.name, command);
+			// });
 
 		// Event Handler
 		this.removeAllListeners();
