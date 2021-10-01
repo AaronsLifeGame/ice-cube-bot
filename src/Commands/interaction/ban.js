@@ -20,7 +20,7 @@ module.exports = new Command({
 	}],
 	permission: "MANAGE_MEMBERS",
 
-	async run(message, args, client) {
+	async execute(message, args, client) {
 		const user = interaction.slashCommandOptions.getUser("user")
 		let Reason = interaction.slashCommandOptions.getString("reason")
 		const member = interaction.guild.members.cacheget(user.id)
@@ -35,5 +35,5 @@ module.exports = new Command({
 		}
 		interaction.reply(`> Successfully banned ${user.tag}\nReason: ${Reason}`)
 	}
-	run(message, args, client);
+	execute(message, args, client);
 });
