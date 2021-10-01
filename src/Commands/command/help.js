@@ -13,14 +13,16 @@ module.exports = new Command({
         .setColor("#000000")
         .setTitle("Help")
         .setDescription(`
-            **!8ball [question]** - Ask the 8 Ball Anything! 
+            
             **!ping** - Shows the Ping of the Bot!
             **!hello** - Hello!
             **!embed** - Shows an Embed!
             **!invite** - Shows Invite Links!
             **!kill [user]** - Kills the Mentioned User!
             **!nameme** - Gives user a New Skill Based Name!
+            **!banner [user]** - Shows Mentioned Users Banner!
             **!suggest [suggestion]** - Only works in <#885317642188099614>!
+            **!8ball [question]** - Ask the 8 Ball Anything! 
             
             **!musicHelp** - Shows a List of Music Commands!
 
