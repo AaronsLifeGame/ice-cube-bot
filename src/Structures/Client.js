@@ -33,7 +33,7 @@ class Client extends Discord.Client {
 			      const commands = commandFiles.map(file => require(`../Commands/${dir}/${file}`));
 			            
 			      commands.forEach(cmd => {
-			      console.log(`${dir.name} ${cmd.name} loaded`)
+			      console.log(`Command ${cmd.name} loaded!`)
 			      this.commands.set(cmd.name, cmd)
 			      slashcommands.push(cmd)     
 				});
@@ -49,24 +49,23 @@ class Client extends Discord.Client {
 				defaultPermission: true
 			}));
 
-			// .forEach(file => {
-			// 	/**
-			// 	 * @type {Command}
-			// 	 */
-			// 	const command = require(`../Commands/${file}`);
-			// 	console.log(`Command ${command.name} loaded`);
-			// 	this.commands.set(command.name, command);
-			// });
+			.forEach(file => {
+				/**
+				 * @type {Command[]}
+				 */
+				const slashCommand = require(`../Commands/interactions/${file}`);
+				console.log(`Command ${slashCommand.name} loaded`);
+				this.slashCommands.set(slashCommand.name, slashCommand);
+			});
+
+		// this.removeAllListeners();
+		// this.on("ready", async () => {
+		// 	const cmds = await this.application.commands.set(slashCommands);
+		// 
+		// 	cmds.forEach(cmd => console.log(`Interaction ${cmd.name} loaded`));
+		// })
 
 		// Event Handler
-		this.removeAllListeners();
-
-		this.on("ready", async () => {
-			const cmds = await this.application.commands.set(slashCommands);
-
-			cmds.forEach(cmd => console.log(`Slash Command ${cmd.name} loaded`));
-		})
-
 		fs.readdirSync("./src/Events")
 			.filter(file => file.endsWith(".js"))
 			.forEach(file => {
@@ -74,7 +73,7 @@ class Client extends Discord.Client {
 				 * @type {Event}
 				 */
 				const event = require(`../Events/${file}`);
-				console.log(`Event ${event.event} loaded`);
+				console.log(`Event ${event.event} loaded!`);
 				this.on(event.event, event.run.bind(null, this));
 			});
 
