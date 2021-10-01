@@ -49,21 +49,12 @@ class Client extends Discord.Client {
 				defaultPermission: true
 			}));
 
-			.forEach(file => {
-				/**
-				 * @type {Command[]}
-				 */
-				const slashCommand = require(`../Commands/interactions/${file}`);
-				console.log(`Command ${slashCommand.name} loaded`);
-				this.slashCommands.set(slashCommand.name, slashCommand);
-			});
-
-		// this.removeAllListeners();
-		// this.on("ready", async () => {
-		// 	const cmds = await this.application.commands.set(slashCommands);
-		// 
-		// 	cmds.forEach(cmd => console.log(`Interaction ${cmd.name} loaded`));
-		// })
+		this.removeAllListeners();
+		this.on("ready", async () => {
+			const cmds = await this.application.commands.set(slashCommands);
+		
+			cmds.forEach(cmd => console.log(`Interaction ${cmd.name} loaded`));
+		})
 
 		// Event Handler
 		fs.readdirSync("./src/Events")
