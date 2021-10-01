@@ -21,8 +21,8 @@ module.exports = new Command({
 	permission: "MANAGE_MEMBERS",
 
 	async run(message, args, client) {
-		const user = interaction.options.getUser("user")
-		let Reason = interaction.options.getString("reason")
+		const user = interaction.slashCommandOptions.getUser("user")
+		let Reason = interaction.slashCommandOptions.getString("reason")
 		const member = interaction.guild.members.cacheget(user.id)
 		
 		if(!member) return interaction.reply("> The User doesn't exist in this Server!")
@@ -35,4 +35,5 @@ module.exports = new Command({
 		}
 		interaction.reply(`> Successfully banned ${user.tag}\nReason: ${Reason}`)
 	}
+	run(message, args, client);
 });
