@@ -21,7 +21,7 @@ module.exports = new Command({
 	permission: "MANAGE_MEMBERS",
 
 	async run(message, args, client) {
-		const user = interaction.options.getTarget("user")
+		const user = interaction.options.getUser("user")
 		let Reason = interaction.options.getString("reason")
 		const member = interaction.guild.members.cacheget(user.id)
 		
