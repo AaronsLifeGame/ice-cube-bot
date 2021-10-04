@@ -20,7 +20,7 @@ module.exports = new Command({
             **!invite** - Shows Invite Links!
             **!kill [user]** - Kills the Mentioned User!
             **!nameme** - Gives user a New Skill Based Name!
-            **!banner [user]** - Shows Mentioned Users Banner!
+            **!webss [Link]** - Shows a screenshot of a Valid URL Link!
             **!suggest [suggestion]** - Only works in <#885317642188099614>!
             **!8ball [question]** - Ask the 8 Ball Anything! 
             
