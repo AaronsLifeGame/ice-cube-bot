@@ -20,8 +20,10 @@ module.exports = new Command({
             **!invite** - Shows Invite Links!
             **!kill [user]** - Kills the Mentioned User!
             **!nameme** - Gives user a New Skill Based Name!
-            **!suggest [suggestion]** - Only works in <#885317642188099614>!
             **!8ball [question]** - Ask the 8 Ball Anything! 
+            
+            **!ticket** - Opens a Ticket if u Need Help!
+            **!suggest [suggestion]** - Only works in <#885317642188099614>!
             
             **!musicHelp** - Shows a List of Music Commands!
 
