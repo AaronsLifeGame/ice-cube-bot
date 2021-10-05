@@ -10,7 +10,7 @@ module.exports = new Command({
   async run(message, args, cmd, client, discord) {
     const channel = await message.guild.channels.create(`ticket: ${message.author.tag}`);
     
-    channel.setParent("894744314322759710");
+    channel.setParent("894746673035763732");
 
     channel.permissionOverwrites.edit(message.guild.id, {
       SEND_MESSAGES: false,
