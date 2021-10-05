@@ -14,5 +14,6 @@ module.exports = new Command({
             .setDescription(`
                 `)
 
-        message.reply({ embeds: [embed] })  
+        message.reply({ embeds: [embed] }) 
+    } 
 })
