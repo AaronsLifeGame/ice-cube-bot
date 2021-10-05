@@ -13,11 +13,11 @@ module.exports = new Command({
     channel.setParent("894739036386779176");
 
     channel.permissionOverwrites.edit(message.guild.id, {
-      SEND_MESSAGE: false,
+      SEND_MESSAGES: false,
       VIEW_CHANNEL: false,
     });
     channel.permissionOverwrites.edit(message.author, {
-      SEND_MESSAGE: true,
+      SEND_MESSAGES: true,
       VIEW_CHANNEL: true,
     });
 
