@@ -1,7 +1,7 @@
 const Command = require("../../Structures/Command.js");
 const Discord = require("discord.js");
 
-module.exports = new Command{
+module.exports = new Command({
   name: "ticket",
   aliases: [],
   permissions: [],
@@ -57,4 +57,4 @@ module.exports = new Command{
         throw err;
       });
   }
-};
+});
