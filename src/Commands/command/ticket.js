@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = new Command({
   name: "ticket",
   aliases: [],
-  permissions: [],
+  permissions: [SEND_MESSAGES],
   description: "open a ticket!",
 
   async run(message, args, cmd, client, discord) {
