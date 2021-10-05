@@ -6,7 +6,8 @@ module.exports = new Command({
   aliases: [],
   permissions: [],
   description: "open a ticket!",
-  async execute(message, args, cmd, client, discord) {
+
+  async run(message, args, cmd, client, discord) {
     const channel = await message.guild.channels.create(`ticket: ${message.author.tag}`);
     
     channel.setParent("893783251456516116");
