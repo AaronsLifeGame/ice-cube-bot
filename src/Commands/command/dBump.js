@@ -12,6 +12,6 @@ module.exports = new Command({
             .setColor("#000000")
             .setDescription(`https://disboard.org/server/bump/885291653668167681`)
 
-        message.send({ embeds: [embed] }) 
+        message.reply({ embeds: [embed] }) 
     } 
 })
