@@ -10,7 +10,7 @@ module.exports = new Command({
   async run(message, args, cmd, client, discord) {
     const channel = await message.guild.channels.create(`ticket: ${message.author.tag}`);
     
-    channel.setParent("894739036386779176");
+    channel.setParent("894744314322759710");
 
     channel.permissionOverwrites.edit(message.guild.id, {
       SEND_MESSAGES: false,
@@ -39,7 +39,7 @@ module.exports = new Command({
     collector.on("collect", (reaction, user) => {
       switch (reaction.emoji.name) {
         case "🔒":
-          channel.updateOverwrite(message.author, { SEND_MESSAGES: false });
+          channel.permissionOverwrites.edit(message.author, { SEND_MESSAGES: false });
           break;
         case "⛔":
           channel.send("Deleting this channel in 5 seconds!");
