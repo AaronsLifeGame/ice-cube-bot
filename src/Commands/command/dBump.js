@@ -10,10 +10,8 @@ module.exports = new Command({
 
             embed
             .setColor("#000000")
-            .setTitle("Help")
-            .setDescription(`
-                `)
+            .setDescription(`https://disboard.org/server/bump/885291653668167681`)
 
-        message.reply({ embeds: [embed] }) 
+        message.send({ embeds: [embed] }) 
     } 
 })
